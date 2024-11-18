@@ -17,6 +17,49 @@ document.addEventListener("DOMContentLoaded", () => {
     loadFilterSettings();
     loadUserPreferences();
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const weatherDescription = document.getElementById("weather-description");
+    const weatherForm = document.getElementById("weather-form");
+    const cityInput = document.getElementById("city-input");
+    const cityButtons = document.querySelectorAll(".city-btn");
+
+    async function fetchWeather(city = "London") {
+        try {
+            const apiKey = "872e0624c57589a77e909895cce49332"; // Replace with your API key
+            const response = await fetch(
+                `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
+            );
+            const data = await response.json();
+            if (data.cod === 200) {
+                weatherDescription.textContent = `${data.name}: ${data.weather[0].description}, ${data.main.temp}°C`;
+            } else {
+                weatherDescription.textContent = "City not found. Please try again.";
+            }
+        } catch (error) {
+            weatherDescription.textContent = "Error fetching weather data.";
+        }
+    }
+
+    fetchWeather();
+
+    weatherForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const city = cityInput.value.trim();
+        if (city) {
+            fetchWeather(city);
+            cityInput.value = "";
+        }
+    });
+
+
+    cityButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const city = button.getAttribute("data-city");
+            fetchWeather(city);
+        });
+    });
+});
+
 
 function toggleTheme() {
     document.body.classList.toggle("dark-mode");

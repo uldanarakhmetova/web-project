@@ -74,12 +74,9 @@ document.addEventListener("DOMContentLoaded", () => {
             document.body.classList.add("dark-mode");
         }
     }
-
-    // Initialize hotel display
     displayHotels();
 });
 
-// Adjusting modals for dark mode as well
 document.addEventListener('show.bs.modal', function (event) {
     const modal = event.relatedTarget;
     if (document.body.classList.contains("dark-mode")) {
