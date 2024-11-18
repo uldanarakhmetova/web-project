@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels - Travel Agency</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="hotels.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <h1>Explore Our Hotels</h1>
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html" class="nav-item active">Home</a></li>
+            <li><a href="directions.html" class="nav-item">Directions</a></li>
+            <li><a href="tours.html" class="nav-item">Tours</a></li>
+            <li><a href="hotels.html" class="nav-item">Hotels</a></li>
+            <li><a href="about.html" class="nav-item">About Us</a></li>
+            <li><a href="contact.html" class="nav-item">Contact</a></li>
+        </ul>
+    </nav>
+    <button id="themeToggleBtn" class="btn btn-secondary">Dark Mode</button>
+</header>
+
+<main class="container my-4">
+    <!-- Hotel Section 1 -->
+    <section class="hotel-category mb-4">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <img src="rixos.jpg" class="card-img-top" alt="Rixos Premium Belek">
+                    <div class="card-body">
+                        <h5 class="card-title">Rixos Premium Belek</h5>
+                        <p class="card-text">Discover the beauty of the Turkish Riviera, enjoy the hospitality, and indulge in the delicious cuisine.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="reviews">
+                    <h3>Customer Reviews</h3>
+                    <div class="review">
+                        <p><strong>John Doe:</strong> "An amazing experience! The staff was friendly, and the location was perfect. Highly recommended!"</p>
+                    </div>
+                    <div class="review">
+                        <p><strong>Jane Smith:</strong> "A fantastic stay with great amenities. The food was delicious, and the service was excellent."</p>
+                    </div>
+                    <button type="button" class="btn btn-info view-review-btn" data-toggle="modal" data-target="#reviewModalRixos">
+                        View Full Reviews
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hotel Section 2 -->
+    <section class="hotel-category mb-4">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <img src="egypt-hotel.jpg" class="card-img-top" alt="Steigenberger Aqua Magic">
+                    <div class="card-body">
+                        <h5 class="card-title">Steigenberger Aqua Magic</h5>
+                        <p class="card-text">Explore the mysteries of Ancient Egypt, relax on the beaches of the Red Sea, and experience vibrant culture.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="reviews">
+                    <h3>Customer Reviews</h3>
+                    <div class="review">
+                        <p><strong>Michael Brown:</strong> "A truly unforgettable holiday. The hotel was beautiful, and the service was top-notch."</p>
+                    </div>
+                    <div class="review">
+                        <p><strong>Emily Davis:</strong> "Great location and wonderful staff. I loved every moment of my stay here."</p>
+                    </div>
+                    <button type="button" class="btn btn-info view-review-btn" data-toggle="modal" data-target="#reviewModalEgypt">
+                        View Full Reviews
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hotel Section 3 -->
+    <section class="hotel-category mb-4">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <img src="dubai.jpg" class="card-img-top" alt="The Ritz-Carlton Dubai">
+                    <div class="card-body">
+                        <h5 class="card-title">The Ritz-Carlton Dubai</h5>
+                        <p class="card-text">Feel the luxury and modernity of Dubai. Explore skyscrapers, visit malls, and enjoy luxury vacations.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="reviews">
+                    <h3>Customer Reviews</h3>
+                    <div class="review">
+                        <p><strong>Sarah Wilson:</strong> "A luxurious stay with all the comforts you could ask for. The service was impeccable."</p>
+                    </div>
+                    <div class="review">
+                        <p><strong>David Johnson:</strong> "An excellent hotel with amazing views. I highly recommend it for a luxurious getaway."</p>
+                    </div>
+                    <button type="button" class="btn btn-info view-review-btn" data-toggle="modal" data-target="#reviewModalDubai">
+                        View Full Reviews
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<div class="modal fade" id="reviewModalRixos" tabindex="-1" role="dialog" aria-labelledby="reviewModalRixosLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="reviewModalRixosLabel">Customer Reviews for Rixos Premium Belek</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="review">
+                    <h5>John Doe</h5>
+                    <p>"An amazing experience! The staff was friendly, and the location was perfect. Highly recommended!"</p>
+                    <p><strong>Rating:</strong> ★★★★★</p>
+                    <p><strong>More details:</strong> The resort had everything we could ask for, from beautiful beaches to excellent food and activities for all ages. I can't wait to go back next year!</p>
+                </div>
+                <div class="review mt-3">
+                    <h5>Jane Smith</h5>
+                    <p>"A fantastic stay with great amenities. The food was delicious, and the service was excellent."</p>
+                    <p><strong>Rating:</strong> ★★★★☆</p>
+                    <p><strong>More details:</strong> The location was perfect, and the hotel had top-notch facilities. The rooms were clean and spacious, and the staff was very accommodating. I loved the pool area, and the kids had a blast!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="reviewModalEgypt" tabindex="-1" role="dialog" aria-labelledby="reviewModalEgyptLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="reviewModalEgyptLabel">Customer Reviews for Steigenberger Aqua Magic</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="review">
+                    <h5>Michael Brown</h5>
+                    <p>"A truly unforgettable holiday. The hotel was beautiful, and the service was top-notch."</p>
+                    <p><strong>Rating:</strong> ★★★★★</p>
+                    <p><strong>More details:</strong> The resort offered exceptional services, with great views of the Red Sea and plenty of excursions to explore Egypt's history. Highly recommend!</p>
+                </div>
+                <div class="review mt-3">
+                    <h5>Emily Davis</h5>
+                    <p>"Great location and wonderful staff. I loved every moment of my stay here."</p>
+                    <p><strong>Rating:</strong> ★★★★☆</p>
+                    <p><strong>More details:</strong> The location was perfect, and I enjoyed the pools and beaches. The kids loved the water park. The only downside was the food options were a bit repetitive.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="reviewModalDubai" tabindex="-1" role="dialog" aria-labelledby="reviewModalDubaiLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="reviewModalDubaiLabel">Customer Reviews for The Ritz-Carlton Dubai</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="review">
+                    <h5>Sarah Wilson</h5>
+                    <p>"A luxurious stay with all the comforts you could ask for. The service was impeccable."</p>
+                    <p><strong>Rating:</strong> ★★★★★</p>
+                    <p><strong>More details:</strong> From the moment I arrived, the staff was welcoming. The hotel offers amazing views of the Palm Jumeirah and Dubai skyline. The spa was a relaxing experience.</p>
+                </div>
+                <div class="review mt-3">
+                    <h5>David Johnson</h5>
+                    <p>"An excellent hotel with amazing views. I highly recommend it for a luxurious getaway."</p>
+                    <p><strong>Rating:</strong> ★★★★★</p>
+                    <p><strong>More details:</strong> The Ritz-Carlton Dubai offers top-tier luxury. The dining experience was extraordinary, and the service was second to none.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-primary text-white text-center py-3 mt-5">
+    <p>© 2024 Travel Tours | Amitov Ansar</p>
+</footer>
+
+<script src="hotels.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+body {
+    font-family: 'Mukta', sans-serif;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 45px;
+}
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+.dark-mode .navbar .bg-light {
+    background-color: #ffffff !important;
+}
+.navbar {
+    background-color: #ffffff !important;
+}
+.nav-link {
+    color: #000000 !important;
+}
+
+.dark-mode .navbar, .dark-mode footer {
+    background-color: #222222 !important;
+}
+.dark-mode .nav-link {
+    color: #ffffff !important;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    left: 50%;
+    bottom: -5px;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+.navbar-links {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    color: #007bff;
+    font-weight: 400;
+    position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #0056b3;
+}
+
+.navbar-nav .nav-link.active {
+    color: #0056b3;
+}
+
+#themeToggleBtn {
+    position: relative;
+    margin-right: 20px;
+}
+
+.navbar-center {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+
+.navbar-center .navbar-nav {
+  display: flex;
+  gap: 15px;
+}
+
+
+.nav-link {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+
+
+.btn-placeholder {
+  width: 85px;
+  height: 38px;
+}
+
+main {
+    padding: 20px;
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    max-height: 600px; 
+    overflow: hidden; 
+}
+
+.carousel-inner img {
+    object-fit: cover; 
+    height: 100%; 
+}
+
+
+.carousel-indicators button {
+    background-color: rgba(255, 255, 255, 0.5); 
+    border: none;
+    border-radius: 50%; 
+    width: 12px;
+    height: 12px;
+}
+
+.carousel-indicators .active {
+    background-color: rgba(255, 255, 255, 1); 
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; 
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(255, 255, 255, 0.7); 
+    border-radius: 50%; 
+}
+
+.carousel-control-prev-icon:focus,
+.carousel-control-next-icon:focus {
+    outline: none; /* Убрать обводку */
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: rgba(255, 255, 255, 1); 
+}
+.testimonials {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #b5dcf7;
+}
+
+
+.card-deck .card {
+    margin: 20px;
+}
+
+.card .card-text,
+.card .blockquote-footer {
+    color: #000;
+}
+
+
+.dark-mode .testimonial-card {
+    background-color: #333;
+    color: #ffffff;
+}
+
+
+footer {
+    background-color: #1e88e5;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative; 
+}

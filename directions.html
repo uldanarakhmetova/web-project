@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Directions</title>
+    <link rel="stylesheet" href="directions.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        .animate {
+            transition: transform 0.2s;
+        }
+        .animate:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <h1>Explore Our Directions</h1>
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html" class="nav-item">Home</a></li>
+            <li><a href="directions.html" class="nav-item active">Directions</a></li>
+            <li><a href="tours.html" class="nav-item">Tours</a></li>
+            <li><a href="hotels.html" class="nav-item">Hotels</a></li>
+            <li><a href="about.html" class="nav-item">About Us</a></li>
+            <li><a href="contact.html" class="nav-item">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="form-section">
+        <h2>Choose Your Destination</h2>
+
+        <div class="city-list-container" style="margin-bottom: 20px;">
+            <h3>Available Cities</h3>
+            <ul id="city-list" style="list-style-type: none; padding: 0;">
+                <li>Istanbul</li>
+                <li>Cappadocia</li>
+                <li>Cairo</li>
+                <li>Giza</li>
+                <li>Luxor</li>
+                <li>Dubai</li>
+                <li>Abu Dhabi</li>
+            </ul>
+        </div>
+
+        <form id="destination-form">
+            <label for="country">Choose a Country:</label>
+            <select id="country" name="country" onchange="updateCities()">
+                <option value="">Select a Country</option>
+                <option value="Turkey">Turkey</option>
+                <option value="Egypt">Egypt</option>
+                <option value="UAE">UAE</option>
+            </select>
+
+            <label for="city">Choose a City:</label>
+            <select id="city" name="city">
+                <option value="">Select a city</option>
+            </select>
+
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="date">
+
+            <label for="nights">Number of Nights:</label>
+            <input type="number" id="nights" name="nights" min="1" max="30">
+
+            <button type="button" id="submit-button" onclick="validateForm(); playSound()" class="bg-change-button animate">Find Directions</button>
+            <button type="button" id="reset-button" onclick="resetForm(); playSound()" class="bg-change-button animate">Reset</button>
+        </form>
+
+        <p id="message"></p>
+        <p id="tour-message"></p>
+    </section>
+
+    <section id="date-time">
+        <p id="current-date-time"></p>
+    </section>
+</main>
+
+<footer>
+    <p>Global Travels | Abzhapparova Gulnaz</p>
+</footer>
+
+<button type="button" onclick="changeBackground(); playSound()" class="bg-change-button animate" id="change-bg-button">Change Background Color</button>
+<button id="themeToggleBtn" class="btn btn-secondary">Dark Mode</button>
+<audio id="notification-sound" src="button-click(chosic.com).mp3"></audio>
+<script src="directions.js"></script>
+</body>
+</html>

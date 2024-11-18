@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Tours</title>
+    <link rel="stylesheet" href="tours.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <h1>Available Tours</h1>
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directions.html">Directions</a></li>
+            <li><a href="tours.html" class="active">Tours</a></li>
+            <li><a href="hotels.html">Hotels</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div id="carouselExample" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="turkey.jpg" alt="Turkey Experience">
+                <h4 class="country-label">Turkey</h4>
+                <button onclick="showTourDetails('turkey')">Read More </button>
+                <div class="tour-details" id="turkey-details" style="display: none;">
+                    <h2>Enchanting Turkey Experience</h2>
+                    <p><strong>City:</strong> Istanbul</p>
+                    <p><strong>Description:</strong> Discover Istanbul's vibrant culture, beautiful architecture, and indulge in delicious local cuisine.</p>
+                    <ul>
+                        <li>Day 1-3: Explore Istanbul (Blue Mosque, Hagia Sophia, Grand Bazaar)</li>
+                        <li>Day 4-7: Hot air balloon rides in Cappadocia and visit ancient ruins.</li>
+                    </ul>
+                    <p><strong>Price:</strong> $1,500</p>
+                    <p><strong>Rating:</strong> ★★★★☆</p>
+                    <p><strong>Reviews:</strong> "Amazing experience!", "Loved the culture!"</p>
+                </div>
+                <div class="rating" data-tour="turkey">
+                    <span class="star" data-value="1">★</span>
+                    <span class="star" data-value="2">★</span>
+                    <span class="star" data-value="3">★</span>
+                    <span class="star" data-value="4">★</span>
+                    <span class="star" data-value="5">★</span>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="egypt.png" alt="Egypt Experience">
+                <h4 class="country-label">Egypt</h4>
+                <button onclick="showTourDetails('egypt')">Read More</button>
+                <div class="tour-details" id="egypt-details" style="display: none;">
+                    <h2>Mystical Egypt Adventure</h2>
+                    <p><strong>City:</strong> Cairo</p>
+                    <p><strong>Description:</strong> Travel through history with visits to Egypt’s ancient wonders and enjoy a Nile cruise.</p>
+                    <ul>
+                        <li>Day 1-2: Pyramids of Giza, Sphinx, and Egyptian Museum</li>
+                        <li>Day 3-5: Luxor and Karnak Temples</li>
+                        <li>Day 6-8: Cruise along the Nile</li>
+                    </ul>
+                    <p><strong>Price:</strong> $1,250</p>
+                    <p><strong>Rating:</strong> ★★★★★</p>
+                </div>
+                <div class="rating" data-tour="egypt">
+                    <span class="star" data-value="1">★</span>
+                    <span class="star" data-value="2">★</span>
+                    <span class="star" data-value="3">★</span>
+                    <span class="star" data-value="4">★</span>
+                    <span class="star" data-value="5">★</span>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="dubai.jpg" alt="Dubai Experience">
+                <h4 class="country-label">Dubai</h4>
+                <button onclick="showTourDetails('dubai')">Read More</button>
+                <div class="tour-details" id="dubai-details" style="display: none;">
+                    <h2>Luxurious Dubai Escape</h2>
+                    <p><strong>City:</strong> Dubai</p>
+                    <p><strong>Description:</strong> Experience the opulence of Dubai, from towering skyscrapers to extravagant shopping.</p>
+                    <ul>
+                        <li>Day 1-3: Burj Khalifa, Dubai Mall, and desert safari</li>
+                        <li>Day 4-6: Day trips to Abu Dhabi</li>
+                        <li>Day 7-9: Relax at beach resorts</li>
+                    </ul>
+                    <p><strong>Price:</strong> $2,000</p>
+                </div>
+                <div class="rating" data-tour="dubai">
+                    <span class="star" data-value="1">★</span>
+                    <span class="star" data-value="2">★</span>
+                    <span class="star" data-value="3">★</span>
+                    <span class="star" data-value="4">★</span>
+                    <span class="star" data-value="5">★</span>
+                </div>
+            </div>
+        </div>
+
+        <section id="testimonials">
+            <h3>What Our Clients Say</h3>
+            <div id="reviews">
+                <div class="review-item">"The Turkey tour exceeded my expectations! Istanbul is a dream." - <strong>Emily Johnson (USA)</strong></div>
+                <div class="review-item">"Egypt was on my bucket list, and this tour made it unforgettable." - <strong>Ahmed El-Sayed (Egypt)</strong></div>
+                <div class="review-item">"The luxury in Dubai was unparalleled. Every detail was perfect." - <strong>Sara Lee (South Korea)</strong></div>
+                <div class="review-item">"This was a well-organized and stress-free vacation." - <strong>Linda Garcia (Mexico)</strong></div>
+                <div class="review-item">"Loved the historical depth of Cairo. A truly enriching experience!" - <strong>Sophia Martinez (Spain)</strong></div>
+                <div class="review-item">"Dubai's shopping and dining are top-notch. Will visit again!" - <strong>Chen Wei (China)</strong></div>
+                <div class="review-item">"Cappadocia's landscapes are breathtaking. I felt like in a fairy tale!" - <strong>Olga Ivanova (Russia)</strong></div>
+                <div class="review-item">"A wonderful escape from the everyday routine. Highly recommended!" - <strong>Kenji Tanaka (Japan)</strong></div>
+                <div class="review-item">"The warmth of the locals made this trip even more special." - <strong>Aisha Abdullahi (Nigeria)</strong></div>
+            </div>
+        </section>
+        <p id="current-date-time"></p>
+</main>
+
+<footer>
+    <p>Global Travels | Abzhapparova Gulnaz</p>
+</footer>
+<button onclick="toggleTheme()" id="theme-toggle">Dark Mode</button>
+<script src="tours.js"></script>
+</body>
+</html>
